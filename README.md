@@ -69,18 +69,8 @@ Cycle 4: Data3
 - The SRAM macro must be correctly instantiated and counted in area report.
 
 ## Simulation and Testing
-
-### Flow
-1. **RTL Simulation**:  
-   Run: `./01_run_vcs_rtl`
-
-2. **Synthesis**:  
-   Run: `./01_run_dc_shell`  
-   Verify: `./08_check` (no latches, MET, SRAM used)
-
-3. **Gate-Level Simulation**:  
-   Run: `./01_run_vcs_gate`
-
-### Debugging:
-- Use `nWave &` and `*.fsdb` files to observe waveform.
-- Use Shift+L in nWave to reload waveform.
+The project includes multiple verification steps:
+- **RTL Simulation**: The RTL simulation is performed using Synopsys VCS.
+- **Synthesis**: The design is synthesized using Synopsys Design Compiler with TSMC 40nm technology.
+- **Gate-Level Simulation**: The synthesized design is simulated using Synopsys VCS.
+- **Waveform Debugging**: Synopsys Verdi is used to inspect signals and debug the design.
